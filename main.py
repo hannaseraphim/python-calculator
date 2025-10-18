@@ -63,9 +63,6 @@ def log():
 
 # ====================
 
-def potentialExit():
-  
-
 # Finish the program
 def exit():
   sys.exit()
