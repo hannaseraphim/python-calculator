@@ -44,7 +44,27 @@ def quotient():
   num1 = int(input("What's the first number? "))
   num2 = int(input("What's the second number? "))
   return print(f"\nResult: Quotient is [{num1 // num2}]\n")
+
+def log():
+  print("\n================")
+  num1 = int(input("What's the logarithm? ")) # 81
+  num2 = int(input("What's the base? ")) #3 
+  result = 0
+
+  if num1 == 0 or num2 == 0:
+    return print("Not a valid logarithm")
+    
+  while num1 >= num2:
+    num1 = num1 / num2
+    result+=1
+  
+  return print(f"\nResult: The exponent is [{result}]\n")
+# Loop que rode tantas vezes ate que o quociente (//) < base, e entao, pegar quantas vezes o loop foi rodado para ter a resposta
+
 # ====================
+
+def potentialExit():
+  
 
 # Finish the program
 def exit():
@@ -107,6 +127,7 @@ def secondpage():
   print("1 - Odd or even")
   print("2 - Potentiation")
   print("3 - Quotient")
+  print("4 - Logarithm")
   print("0 - Back ")
   print("================")
   opt = int(input("\nType an option: "))
@@ -124,6 +145,10 @@ def secondpage():
 
     case 3:
       quotient()
+      decision()
+
+    case 4:
+      log()
       decision()
 
     # Go back
